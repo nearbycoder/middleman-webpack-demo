@@ -1,0 +1,1 @@
+console.log('testing bundle from webpack')
