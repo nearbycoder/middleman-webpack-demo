@@ -47,8 +47,3 @@ configure :build do
   
 end
 
-
-after_build do |builder|
-  FileUtils.rm_rf(['./build/javascripts', './build/stylesheets', './build/styles.css', './build/assets/javascript/styles.bundle.js'])
-end
-

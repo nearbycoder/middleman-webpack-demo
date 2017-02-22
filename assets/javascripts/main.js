@@ -1,1 +1,3 @@
-console.log('testing bundle from webpack')
+import '../stylesheets/main.scss';
+
+console.log('testing bundle from webpack');

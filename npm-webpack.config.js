@@ -11,8 +11,8 @@ module.exports = {
   },
 
   output: {
-    path: __dirname + '/.tmp/dist',
-    filename: 'assets/javascript/main.bundle.js',
+    path: './dist',
+    filename: 'javascript/roundup.js',
   },
 
   module: {
@@ -29,7 +29,8 @@ module.exports = {
         test: /assets\/stylesheets\/.*\.scss$/,
         loader: ExtractTextPlugin.extract({
           fallback: "style-loader",
-          use: "css-loader!sass-loader?" + sassPaths
+          use: "css-loader!sass-loader?" + sassPaths,
+          publicPath: './dist/css/'
         })
       },
       { test: /\.css$/, loader: "style!css" },
@@ -37,7 +38,7 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: "assets/stylesheets/main.bundle.css",
+      filename: "css/roundup.css",
       allChunks: true
     }),
   ]
